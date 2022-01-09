@@ -10,7 +10,7 @@ namespace ProjetoElevador.Model
     {
         void Inicializar(int capacidade, int andares);
 
-        int Entrar();
+        int Entrar(Pessoa pessoa);
 
         int Subir();
 

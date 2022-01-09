@@ -1,0 +1,16 @@
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ProjetoElevador.exe
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ProjetoElevador.deps.json
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ProjetoElevador.runtimeconfig.json
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ProjetoElevador.runtimeconfig.dev.json
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ProjetoElevador.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ref\ProjetoElevador.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\ProjetoElevador.pdb
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.csproj.AssemblyReference.cache
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.AssemblyInfoInputs.cache
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.AssemblyInfo.cs
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.csproj.CoreCompileInputs.cache
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ref\ProjetoElevador.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.pdb
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.genruntimeconfig.cache
