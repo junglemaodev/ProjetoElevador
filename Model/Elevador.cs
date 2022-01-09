@@ -52,25 +52,52 @@ namespace ProjetoElevador.Model
 
         public int Decer()
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (Andar > 0)
+                {
+                    Andar--;
+                    foreach (Pessoa pessoa in _pessoas)
+                    {
+                        if (pessoa.Andar == Andar)
+                        {
+                            Sair(pessoa);
+                        }
+                    }
+                }
+
+                return Andar;
+            }
+            catch (Exception e)
+            {
+                throw new NotImplementedException(e.Message);
+            }
         }
 
-        // Adiciona um ocupante ao elevador
+        // Adiciona um ocupante ao elevador,
+        // desde que não exceda a capacidade
         // e retorna a qtde de ocupantes.
         public int Entrar(Pessoa pessoa)
         {
             try
             {
-                _pessoas.Add(pessoa);
+                if (Pessoas < Capacidade)
+                {
+                    _pessoas.Add(pessoa);
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException("Elevador lotado, aguarde sua vez");
+                }
             } 
-            catch (Exception ex) 
+            catch (ArrayTypeMismatchException ex) 
             {
                 // A exceção é gerada caso ocorra uma tentativa de armazenar
                 // um elemento do tipo errado na lista de Pessoas. 
                 throw new ArrayTypeMismatchException(ex.Message);
             }
 
-            return _pessoas.Count;
+            return Pessoas;
         }
 
         public void Inicializar(int capacidade, int andares)
@@ -105,11 +132,11 @@ namespace ProjetoElevador.Model
         // Remove da lista de ocupantes a pessoa 
         // correspondente ao índice informado e
         // retorna a quantidade de ocupantes.
-        public int Sair(int x)
+        public int Sair(Pessoa p)
         {
             try
             {
-                _pessoas.RemoveAt(x);
+                _pessoas.Remove(p);
             }
             catch (Exception e)
             {
@@ -121,16 +148,26 @@ namespace ProjetoElevador.Model
 
         public int Subir()
         {
-            if(Andar != TotalAndares)
+            try
             {
-                Andar++;
-                foreach (Pessoa pessoa in _pessoas)
+                if (Andar != TotalAndares)
                 {
-                    
+                    Andar++;
+                    foreach (Pessoa pessoa in _pessoas)
+                    {
+                        if (pessoa.Andar == Andar)
+                        {
+                            Sair(pessoa);
+                        }
+                    }
                 }
+
+                return Andar;
             }
-            
-            throw new NotImplementedException();
+            catch (Exception e)
+            {
+                throw new NotImplementedException(e.Message);
+            }
         }
     }
 }

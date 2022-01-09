@@ -16,6 +16,6 @@ namespace ProjetoElevador.Model
 
         int Decer();
 
-        int Sair(int x);
+        int Sair(Pessoa pessoa);
     }
 }

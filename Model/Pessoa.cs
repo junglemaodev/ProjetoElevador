@@ -35,8 +35,6 @@ namespace ProjetoElevador.Model
                     break;
                 
             } while (true);
-            
-            
         }
     }
 }
