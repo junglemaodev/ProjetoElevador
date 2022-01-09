@@ -1,12 +1,15 @@
 ﻿using System;
+using ProjetoElevador.Controller;
+using ProjetoElevador.Model;
+using ProjetoElevador.View;
 
 namespace ProjetoElevador
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ElevadorController elevadorController = new ElevadorController();
         }
     }
 }
