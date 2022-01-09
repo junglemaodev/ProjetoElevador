@@ -3,10 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoElevador.Model;
 
 namespace ProjetoElevador.View
 {
-    internal class PainelElevador
+    public class PainelElevador
     {
+
+        public PainelElevador(Elevador elevador)
+        {
+            Console.WriteLine("Digite a quantidade de andares do Predio:");
+            int andares = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a capacidade máxima do elevador:");
+            int capacidade = int.Parse(Console.ReadLine());
+
+            elevador.Inicializar(capacidade, andares);
+        }
+
     }
 }
