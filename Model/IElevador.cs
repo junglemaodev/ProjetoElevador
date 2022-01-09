@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoElevador.Model
 {
-    internal interface IElevador
+    public interface IElevador
     {
         void Inicializar(int capacidade, int andares);
 
@@ -16,6 +16,6 @@ namespace ProjetoElevador.Model
 
         int Decer();
 
-        int Sair();
+        int Sair(int x);
     }
 }

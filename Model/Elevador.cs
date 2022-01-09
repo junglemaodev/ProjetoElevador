@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoElevador.Model
 {
-    internal class Elevador : IElevador
+    public class Elevador : IElevador
     {
         // O andar em que o elevador está.
         private int _andar;
@@ -22,8 +22,7 @@ namespace ProjetoElevador.Model
 
         public Elevador(List<Pessoa> pessoas)
         {
-            _pessoas.AddRange(pessoas);
-            
+            _pessoas = pessoas;
         }
 
         // Método acessor para o atributo _andar.
@@ -66,8 +65,9 @@ namespace ProjetoElevador.Model
             } 
             catch (Exception ex) 
             {
-                string msg = ex.Message;
-                throw new ArrayTypeMismatchException(msg);
+                // A exceção é gerada caso ocorra uma tentativa de armazenar
+                // um elemento do tipo errado na lista de Pessoas. 
+                throw new ArrayTypeMismatchException(ex.Message);
             }
 
             return _pessoas.Count;
@@ -102,13 +102,34 @@ namespace ProjetoElevador.Model
             }
         }
 
-        public int Sair()
+        // Remove da lista de ocupantes a pessoa 
+        // correspondente ao índice informado e
+        // retorna a quantidade de ocupantes.
+        public int Sair(int x)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _pessoas.RemoveAt(x);
+            }
+            catch (Exception e)
+            {
+                throw new NotImplementedException(e.Message);
+            }
+            
+            return _pessoas.Count;
         }
 
         public int Subir()
         {
+            if(Andar != TotalAndares)
+            {
+                Andar++;
+                foreach (Pessoa pessoa in _pessoas)
+                {
+                    
+                }
+            }
+            
             throw new NotImplementedException();
         }
     }
