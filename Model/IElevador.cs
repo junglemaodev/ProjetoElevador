@@ -8,5 +8,14 @@ namespace ProjetoElevador.Model
 {
     internal interface IElevador
     {
+        void Inicializar(int capacidade, int andares);
+
+        int Entrar();
+
+        int Subir();
+
+        int Decer();
+
+        int Sair();
     }
 }
