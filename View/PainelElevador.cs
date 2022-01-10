@@ -37,21 +37,16 @@ namespace ProjetoElevador.View
             }
 
             Thread.Sleep(2500);
-            this.LimparDisplayAreaEsquerda(x, y);
+            LimparDisplay(display, x, y);
         }
 
-        private void LimparDisplayAreaEsquerda (int x, int y)
+        private void LimparDisplay (string[] d, int x, int y)
         {
-            x += 2;
-            y += 4;
-
-            for(int a = x; a <= x+24; a++)
+            foreach(string line in d)
             {
-                for(int b = y; b <= y+7; b++)
-                {
-                    Console.SetCursorPosition(a, b);
-                    Console.Write(' ');
-                }
+                Console.SetCursorPosition(x, y);
+                Console.Write(line.Replace("#", " "));
+                y++;
             }
         }
     }
