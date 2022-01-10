@@ -38,8 +38,14 @@ namespace ProjetoElevador.View
             ";
 
             Console.Clear();
-            Console.SetCursorPosition(x, y);
-            Console.Write(display.Trim());
+
+            foreach(string line in display.Split("\n"))
+            {
+                Console.SetCursorPosition(x, y);
+                Console.Write(line);
+            }
+            
+            
         }
     }
 }
