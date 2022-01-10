@@ -11,8 +11,16 @@ namespace ProjetoElevador.View
     public class PainelElevador
     {
 
+        private string _path;
+        private string[] _display;
+
         public PainelElevador(Elevador elevador)
         {
+            _path = @"C:\Users\adeni\Development\Samsung Ocean\";
+            _path += @"Formacao_MS-Dev\ProjetoElevador\TextFiles\";
+
+            _display = System.IO.File.ReadAllLines($"{_path}display.txt");
+
             Console.WriteLine("Digite a quantidade de andares do Predio:");
             int andares = int.Parse(Console.ReadLine());
 
@@ -24,25 +32,23 @@ namespace ProjetoElevador.View
 
         public void exibirDisplayElevador(int x, int y)
         {
-            string path = @"C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\TextFiles\";
-            string[] display = System.IO.File.ReadAllLines($"{path}display.txt" );
-
             Console.Clear();
 
-            foreach(string line in display)
+            foreach(string line in _display)
             {
                 Console.SetCursorPosition(x, y);
                 Console.Write(line);
                 y++;
             }
-
-            Thread.Sleep(2500);
-            LimparDisplay(display, x, y);
         }
 
-        private void LimparDisplay (string[] d, int x, int y)
+        public void LimparDisplay (int x, int y)
         {
-            foreach(string line in d)
+            int left = Console.WindowLeft, top = Console.WindowTop;
+
+            Console.SetCursorPosition(left, top);
+            Console.Clear();
+            foreach (string line in _display)
             {
                 Console.SetCursorPosition(x, y);
                 Console.Write(line.Replace("#", " "));
