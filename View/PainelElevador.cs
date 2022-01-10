@@ -37,8 +37,9 @@ namespace ProjetoElevador.View
                 └──────────────────┴─────────────────┘
             ";
 
+            Console.Clear();
             Console.SetCursorPosition(x, y);
-            Console.Write(display);
+            Console.Write(display.Trim());
         }
     }
 }
