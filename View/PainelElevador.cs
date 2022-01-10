@@ -21,5 +21,24 @@ namespace ProjetoElevador.View
             elevador.Inicializar(capacidade, andares);
         }
 
+        public void exibirDisplayElevador(int x, int y)
+        {
+            string display = @"
+                ┌──────────────────┬─────────────────┐
+                │      Andar       │    Ocupantes    │
+                ├──────────────────┼─────────────────┤
+                │                  │                 │
+                │                  │                 │
+                │                  │                 │
+                │                  │                 │
+                │                  │                 │
+                │                  │                 │
+                │                  │                 │
+                └──────────────────┴─────────────────┘
+            ";
+
+            Console.SetCursorPosition(x, y);
+            Console.Write(display);
+        }
     }
 }

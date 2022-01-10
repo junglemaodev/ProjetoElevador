@@ -18,6 +18,7 @@ namespace ProjetoElevador.Controller
         {
             _elevador = new Elevador(_pessoas);
             PainelElevador painel  = new PainelElevador(_elevador);
+            painel.exibirDisplayElevador(80, 2);
         }
     }
 }
