@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using ProjetoElevador.Model;
 
@@ -33,6 +34,24 @@ namespace ProjetoElevador.View
                 Console.SetCursorPosition(x, y);
                 Console.Write(line);
                 y++;
+            }
+
+            Thread.Sleep(2500);
+            this.LimparDisplayAreaEsquerda(x, y);
+        }
+
+        private void LimparDisplayAreaEsquerda (int x, int y)
+        {
+            x += 2;
+            y += 4;
+
+            for(int a = x; a <= x+24; a++)
+            {
+                for(int b = y; b <= y+7; b++)
+                {
+                    Console.SetCursorPosition(a, b);
+                    Console.Write(' ');
+                }
             }
         }
     }
