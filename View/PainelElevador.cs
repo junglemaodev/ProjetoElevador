@@ -23,7 +23,8 @@ namespace ProjetoElevador.View
 
         public void exibirDisplayElevador(int x, int y)
         {
-            string[] display = System.IO.File.ReadAllLines(@"..\TextFiles\display.txt");
+            string path = @"C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\TextFiles\";
+            string[] display = System.IO.File.ReadAllLines($"{path}display.txt" );
 
             Console.Clear();
 
@@ -33,8 +34,6 @@ namespace ProjetoElevador.View
                 Console.Write(line);
                 y++;
             }
-            
-            
         }
     }
 }
