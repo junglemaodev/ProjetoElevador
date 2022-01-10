@@ -23,26 +23,15 @@ namespace ProjetoElevador.View
 
         public void exibirDisplayElevador(int x, int y)
         {
-            string display = @"
-                ┌──────────────────┬─────────────────┐
-                │      Andar       │    Ocupantes    │
-                ├──────────────────┼─────────────────┤
-                │                  │                 │
-                │                  │                 │
-                │                  │                 │
-                │                  │                 │
-                │                  │                 │
-                │                  │                 │
-                │                  │                 │
-                └──────────────────┴─────────────────┘
-            ";
+            string[] display = System.IO.File.ReadAllLines(@"..\TextFiles\display.txt");
 
             Console.Clear();
 
-            foreach(string line in display.Split("\n"))
+            foreach(string line in display)
             {
                 Console.SetCursorPosition(x, y);
                 Console.Write(line);
+                y++;
             }
             
             
