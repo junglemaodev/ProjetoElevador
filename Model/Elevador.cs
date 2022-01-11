@@ -87,7 +87,8 @@ namespace ProjetoElevador.Model
                 }
                 else
                 {
-                    throw new IndexOutOfRangeException("Elevador lotado, aguarde sua vez");
+                    // Exceção disparada ao atingir a capacidade máxima.
+                    throw new IndexOutOfRangeException("Aguarde sua vez...\nElevador lotado.");
                 }
             } 
             catch (ArrayTypeMismatchException ex) 
@@ -95,6 +96,12 @@ namespace ProjetoElevador.Model
                 // A exceção é gerada caso ocorra uma tentativa de armazenar
                 // um elemento do tipo errado na lista de Pessoas. 
                 throw new ArrayTypeMismatchException(ex.Message);
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Console.SetCursorPosition(Console.WindowLeft, Console.WindowTop);
+                Console.Clear();
+                Console.WriteLine(ex.Message);
             }
 
             return Pessoas;
