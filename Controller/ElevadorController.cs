@@ -21,6 +21,7 @@ namespace ProjetoElevador.Controller
             painel.exibirDisplayElevador(70, 2);
             System.Threading.Thread.Sleep(1500);
             painel.LimparDisplay(70, 2);
+            painel.ExibirAndar(15);
         }
     }
 }
