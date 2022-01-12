@@ -134,6 +134,11 @@ namespace ProjetoElevador.Model
             {
                 throw new ArgumentException($"{e.GetType().Name}: {e.Message}");
             }
+            catch (ArgumentException e) when (andares > 99)
+            {
+                string CustomMessage = "O número de andares deve ser definido no intervalo de 2 até 99.";
+                throw new ArgumentException($"{e.Message}\n{CustomMessage}");
+            }
         }
 
         // Remove da lista de ocupantes a pessoa 
