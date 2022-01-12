@@ -14,6 +14,9 @@ namespace ProjetoElevador.View
         private string _path;
         private string[] _display;
 
+        // Promove a iteração a partir da tela do console
+        // para obter as informações necessárias a inicialização
+        // do objeto Elevador.
         public PainelElevador(Elevador elevador)
         {
             _path = @"C:\Users\adeni\Development\Samsung Ocean\";
@@ -30,6 +33,9 @@ namespace ProjetoElevador.View
             elevador.Inicializar(capacidade, andares);
         }
 
+        // Exbibe um painel à direita da tela que exibirá
+        // o ANDAR e a qtde de OCUPANTES durante o funcionamento
+        // do Elevador.
         public void exibirDisplayElevador(int x, int y)
         {
             Console.Clear();
@@ -42,6 +48,8 @@ namespace ProjetoElevador.View
             }
         }
 
+        // Limpará os campos do painel a cada 
+        // nova exibição de informações.
         public void LimparDisplay (int x, int y)
         {
             int left = Console.WindowLeft, top = Console.WindowTop;
@@ -53,6 +61,29 @@ namespace ProjetoElevador.View
                 Console.SetCursorPosition(x, y);
                 Console.Write(line.Replace("#", " "));
                 y++;
+            }
+        }
+
+        public void ExibirAndar(int n)
+        {
+            // Algarismos exibidos em ASCII art.
+            string[] alg1;
+            string[] alg2;
+            string[] alg99;            
+
+            // Carregando os respectivos algarismos
+            // conforme o inteiro informado.
+            alg1 = System.IO.File.ReadAllLines($"{_path}{n.ToString("00")[0]}.txt");
+            alg2 = System.IO.File.ReadAllLines($"{_path}{n.ToString("00")[1]}.txt");
+            alg99 = System.IO.File.ReadAllLines($"{_path}none.txt");
+
+            // Aglutinando as linhas dos algarismos
+            // alg1 e alg2 e exibindo na tela
+            for (int i = 0; i < alg1.Length; i++)
+            {
+                alg99[i] = $"{alg1[i]}{alg2[i].Substring(1)}";
+                Console.SetCursorPosition(74, 5 + i);
+                Console.Write(alg99[i]);
             }
         }
     }
