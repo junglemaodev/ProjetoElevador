@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yFak09SYT2Di/cmwEfchSFAKZTuimzxkD+5jMM5hB1I/hb4ibNA6W7vKdnyFmXZHEwJD5aqjL541R6ud1iVPcA==",
+  "dgSpecHash": "RRpzkf4Oq14LK5qj3ABW6I3ab5yODsz/HZZz5fSuD/2WLTtOvYwf+kO6NKyKn+vRQcEIqD8nzgf0VL/BMlfV8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\adeni\\Development\\Samsung Ocean\\Formacao_MS-Dev\\ProjetoElevador\\ProjetoElevador.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\adeni\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\adeni\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

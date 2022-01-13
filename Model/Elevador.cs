@@ -12,7 +12,7 @@ namespace ProjetoElevador.Model
         private int _andar;
 
         // A capacidade máxima de pessoas.
-        private int _capacidade;
+        private static int _capacidade;
 
         // Ocupantes do elevador.
         private List<Pessoa> _pessoas = new List<Pessoa>();
@@ -33,7 +33,7 @@ namespace ProjetoElevador.Model
         }
 
         // Método acessor para o atributo _capacidade.
-        public int Capacidade {
+        public static int Capacidade {
             get { return _capacidade; }
             set { _capacidade = value; }
         }

@@ -24,7 +24,9 @@ namespace ProjetoElevador.Controller
             System.Threading.Thread.Sleep(1500);
             painel.LimparDisplay(70, 2);
             painel.AtualizarInfoPainel(18,10);
+            painel.AnimarPessoaIn(51, 4);
             Console.WriteLine("\n\n");
+            System.Threading.Thread.Sleep(700);
         }
     }
 }

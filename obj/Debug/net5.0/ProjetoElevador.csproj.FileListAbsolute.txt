@@ -14,3 +14,7 @@ C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Deb
 C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ref\ProjetoElevador.dll
 C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.pdb
 C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.genruntimeconfig.cache
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\System.Text.Encoding.CodePages.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+C:\Users\adeni\Development\Samsung Ocean\Formacao_MS-Dev\ProjetoElevador\obj\Debug\net5.0\ProjetoElevador.csproj.CopyComplete

@@ -45,7 +45,7 @@ namespace ProjetoElevador.View
                 throw new ArgumentNullException("O elevador não pode ter capacidade nula.");
 
             elevador.Inicializar(capacidade, andares);
-            
+            Console.Clear();
         }
 
         // Exbibe um painel à direita da tela que exibirá
@@ -130,7 +130,7 @@ namespace ProjetoElevador.View
 
         public void ExibirElevador(int x, int y)
         {
-            string[] graphElevator = System.IO.File.ReadAllLines($"{_path}ElevatorClosed.txt");
+            string[] graphElevator = System.IO.File.ReadAllLines($"{_path}ElevatorClosed2.txt");
             int h = graphElevator.Length;
 
             Console.SetCursorPosition(_left, _top);
@@ -141,6 +141,30 @@ namespace ProjetoElevador.View
                 y++;
             }
             Console.WriteLine();
+        }
+
+
+        public void AnimarPessoaIn(int x, int y)
+        {
+            string[] graphPeople = System.IO.File.ReadAllLines($"{_path}people.txt");
+            int h = graphPeople.Length;
+            
+            Console.SetCursorPosition(_left, _top);
+            int stopx = Console.WindowWidth - 31 - x - graphPeople[0].Length;
+            for(int i = x; i > stopx; i--){
+                int j = y;
+                Thread.Sleep(100);
+                foreach (string line in graphPeople)
+                {
+                    Console.SetCursorPosition(_left, _top);
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    Console.SetCursorPosition(i, j);                    
+                    Console.Write(line);
+                    j++;
+                }
+                Console.ResetColor();
+            }
+
         }
     }
 }
