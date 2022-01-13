@@ -13,6 +13,8 @@ namespace ProjetoElevador.View
 
         private string _path;
         private string[] _display;
+        private readonly int _top = Console.WindowTop;
+        private readonly int _left = Console.WindowLeft;
 
         // Promove a iteração a partir da tela do console
         // para obter as informações necessárias a inicialização
@@ -27,10 +29,23 @@ namespace ProjetoElevador.View
             Console.WriteLine("Digite a quantidade de andares do Predio:");
             int andares = int.Parse(Console.ReadLine());
 
+            switch (andares)
+            {
+                case 0:
+                    throw new ArgumentNullException("O prédio deve possuir ao menos dois andares.");
+
+                case > 99:
+                    throw new ArgumentException("A quantidade de andares não poderá exceder 99.");
+            }
+ 
             Console.WriteLine("Digite a capacidade máxima do elevador:");
             int capacidade = int.Parse(Console.ReadLine());
 
+             if (capacidade == 0)
+                throw new ArgumentNullException("O elevador não pode ter capacidade nula.");
+
             elevador.Inicializar(capacidade, andares);
+            
         }
 
         // Exbibe um painel à direita da tela que exibirá
@@ -38,8 +53,6 @@ namespace ProjetoElevador.View
         // do Elevador.
         public void exibirDisplayElevador(int x, int y)
         {
-            Console.Clear();
-
             foreach(string line in _display)
             {
                 Console.SetCursorPosition(x, y);
@@ -52,10 +65,7 @@ namespace ProjetoElevador.View
         // nova exibição de informações.
         public void LimparDisplay (int x, int y)
         {
-            int left = Console.WindowLeft, top = Console.WindowTop;
-
-            Console.SetCursorPosition(left, top);
-            Console.Clear();
+            Console.SetCursorPosition(_left, _top);            
             foreach (string line in _display)
             {
                 Console.SetCursorPosition(x, y);
@@ -116,6 +126,21 @@ namespace ProjetoElevador.View
         {
             ExibirAndar(andar);
             ExibirOcupantes(ocupantes);
+        }
+
+        public void ExibirElevador(int x, int y)
+        {
+            string[] graphElevator = System.IO.File.ReadAllLines($"{_path}ElevatorClosed.txt");
+            int h = graphElevator.Length;
+
+            Console.SetCursorPosition(_left, _top);
+            foreach(string line in graphElevator)
+            {
+                Console.SetCursorPosition(x, y);
+                Console.Write(line);
+                y++;
+            }
+            Console.WriteLine();
         }
     }
 }

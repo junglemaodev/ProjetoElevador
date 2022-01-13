@@ -18,6 +18,8 @@ namespace ProjetoElevador.Controller
         {
             _elevador = new Elevador(_pessoas);
             PainelElevador painel  = new PainelElevador(_elevador);
+            painel.ExibirElevador(10, 1);
+            System.Threading.Thread.Sleep(300);
             painel.exibirDisplayElevador(70, 2);
             System.Threading.Thread.Sleep(1500);
             painel.LimparDisplay(70, 2);

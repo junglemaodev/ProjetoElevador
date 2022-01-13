@@ -109,36 +109,25 @@ namespace ProjetoElevador.Model
 
         public void Inicializar(int capacidade, int andares)
         {
-            try 
+            try
             {
                 _capacidade = capacidade;
-            } 
-            catch (NullReferenceException e) when (capacidade == 0) 
-            {
-                throw new NullReferenceException(e.Message);
             }
-            catch (ArgumentException e) when (capacidade.GetType().Name != "Int")
+            catch (Exception ex)
             {
-                throw new ArgumentException($"{e.GetType().Name}: {e.Message}");
+                Console.WriteLine(ex.Message);
             }
 
             try
             {
                 _totalAndares = andares;
             }
-            catch (NullReferenceException e) when (andares == 0)
+            catch (Exception ex)
             {
-                throw new NullReferenceException(e.Message);
+                Console.WriteLine(ex.Message);
             }
-            catch (ArgumentException e) when (andares.GetType().Name != "Int")
-            {
-                throw new ArgumentException($"{e.GetType().Name}: {e.Message}");
-            }
-            catch (ArgumentException e) when (andares > 99)
-            {
-                string CustomMessage = "O número de andares deve ser definido no intervalo de 2 até 99.";
-                throw new ArgumentException($"{e.Message}\n{CustomMessage}");
-            }
+
+            
         }
 
         // Remove da lista de ocupantes a pessoa 
